@@ -80,7 +80,7 @@ and technical support.
 
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
-    [Testing access- will be deleted]
+    [Testing from windows]
 
 ## Contributors
 <!-- this section is updated using external bot, see https://allcontributors.org/docs/en/bot/usage - post comment like
