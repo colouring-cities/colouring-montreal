@@ -79,8 +79,7 @@ and technical support.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program. If not, see <http://www.gnu.org/licenses/>.
-	Test timeout    
+    along with this program. If not, see <http://www.gnu.org/licenses/>.    
 
 ## Contributors
 <!-- this section is updated using external bot, see https://allcontributors.org/docs/en/bot/usage - post comment like
