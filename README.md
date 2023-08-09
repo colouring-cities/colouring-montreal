@@ -80,7 +80,7 @@ and technical support.
 
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
-    [Testing access- will be deleted]
+    
 
 ## Contributors
 <!-- this section is updated using external bot, see https://allcontributors.org/docs/en/bot/usage - post comment like
@@ -126,4 +126,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 Even more thanks go to Colouring Cities contributors, funders, project partners, consultees,
 advisers, supporters and friends - [everyone involved in the
 project](https://www.pages.colouring.london/whoisinvolved).
-(test)
+
