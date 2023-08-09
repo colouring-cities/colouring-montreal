@@ -79,12 +79,7 @@ and technical support.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-<<<<<<< HEAD
     along with this program. If not, see <http://www.gnu.org/licenses/>.
-    [Testing from windows]
-=======
-    along with this program. If not, see <http://www.gnu.org/licenses/>.    
->>>>>>> 03070a0b088748f380da442c2df87fc41ccf15ef
 
 ## Contributors
 <!-- this section is updated using external bot, see https://allcontributors.org/docs/en/bot/usage - post comment like
@@ -130,4 +125,3 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 Even more thanks go to Colouring Cities contributors, funders, project partners, consultees,
 advisers, supporters and friends - [everyone involved in the
 project](https://www.pages.colouring.london/whoisinvolved).
-
