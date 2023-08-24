@@ -21,10 +21,14 @@ export type BuildingMapTileset =
     'sust_dec' |
     'building_attachment_form' |
     'landuse' |
+    'original_landuse' |
     'dynamics_demolished_count' |
     'disaster_severity' |
     'team' |
-    'survival_status';
+    'survival_status'|
+    'typology_classification'|
+    'typology_style_period' |
+    'typology_dynamic_classification';
 
 export type SpecialMapTileset = 'base_light' | 'base_night' | 'base_night_outlines' | 'highlight' | 'number_labels' | 'base_boroughs';
 

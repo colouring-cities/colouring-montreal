@@ -49,6 +49,25 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
+            mapStyle: 'typology_style_period',
+            legend: {
+                title: 'Architectural style',
+                elements: [
+                    { color: '#FFF739', text: '43AD-410 (Roman)' },
+                    { color: '#C5BD00', text: '410-1485 (Medieval)' },
+                    { color: '#FF9A39', text: '1485-1603 (Tudor)' },
+                    { color: '#C56000', text: '1603-1714 (Stuart)' },
+                    { color: '#EA8072', text: '1714-1837 (Georgian)' },
+                    { color: '#A71200', text: '1837-1901 (Victorian)' },
+                    { color: '#A272D4', text: '1901-1914 (Edwardian)' },
+                    { color: '#3988C5', text: '1914-1945 (WWI-WWII)' },
+                    { color: '#5ADFA2', text: '1946-1979 (Post war)' },
+                    { color: '#C2F47A', text: '1980-1999 (Late C20)' },
+                    { color: '#6FB40A', text: '2000-2025 (Early C21)' },
+                ]
+            }
+        },
+        {
             mapStyle: 'survival_status',
             legend: {
                 title: 'Survival status',
@@ -299,18 +318,91 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             ]
         },
     }],
-    [Category.Typology]: [{
-        mapStyle: 'building_attachment_form',
-        legend: {
-            title: 'Adjacency/Configuration',
-            elements: [
-                { color: "#f2a2b9", text: "Detached" },
-                { color: "#ab8fb0", text: "Semi-Detached" },
-                { color: "#3891d1", text: "End-Terrace" },
-                { color: "#226291", text: "Mid-Terrace" }
-            ]
+    [Category.Typology]: [
+        {
+            mapStyle: 'typology_classification',
+            legend: {
+                title: 'Typology classification',
+                elements: [
+                    { color: '#0311AB', text: '1-3 storeys: Detached' },
+                    { color: '#3845D4', text: '1-3 storeys: Tightly grouped' },
+                    { color: '#6D79FD', text: '1-3 storeys: Loosely grouped' },
+                    { color: '#FF5D00', text: '4-7 storeys: Detached' },
+                    { color: '#FF8000', text: '4-7 storeys: Tightly grouped' },
+                    { color: '#FFA200', text: '4-7 storeys: Loosely grouped' },
+                    { color: '#AB1303', text: '8+ storeys: Detached' },
+                    { color: '#D43A29', text: '8+ storeys: Tightly grouped' },
+                    { color: '#FC604F', text: '8+ storeys: Loosely grouped' },
+                ]
+            }
         },
-    }],
+        /*{
+            mapStyle: 'typology_style_period',
+            legend: {
+                title: 'Architectural style',
+                elements: [
+                    { color: '#FFF739', text: '43AD-410 (Roman)' },
+                    { color: '#C5BD00', text: '410-1485 (Medieval)' },
+                    { color: '#FF9A39', text: '1485-1603 (Tudor)' },
+                    { color: '#C56000', text: '1603-1714 (Stuart)' },
+                    { color: '#EA8072', text: '1714-1837 (Georgian)' },
+                    { color: '#A71200', text: '1837-1901 (Victorian)' },
+                    { color: '#A272D4', text: '1901-1914 (Edwardian)' },
+                    { color: '#3988C5', text: '1914-1945 (WWI-WWII)' },
+                    { color: '#5ADFA2', text: '1946-1979 (Post war)' },
+                    { color: '#C2F47A', text: '1980-1999 (Late C20)' },
+                    { color: '#6FB40A', text: '2000-2025 (Early C21)' },
+                ]
+            }
+        },*/
+        {
+            mapStyle: 'typology_dynamic_classification',
+            legend: {
+                title: 'Dynamic classification',
+                elements: [
+                    { color: '#96484A', text: 'Repetitive small, domestic plots' },
+                    { color: '#4B9889', text: 'Linear non-domestic, i.e. high streets' },
+                    { color: '#4F8DA8', text: 'Large plots with internal roads' },
+                    { color: '#897A5D', text: 'Other' },
+                ]
+            }
+        },
+        {
+        mapStyle: 'original_landuse',
+            legend: {
+                title: 'Original Land Use',
+                elements: [
+                    { color: '#e5050d', text: 'Mixed Use' },
+                    { subtitle: 'Single use:'},
+                    { color: '#252aa6', text: 'Residential (unverified)' },
+                    { color: '#7025a6', text: 'Residential (verified)' },
+                    { color: '#ff8c00', text: 'Retail' },
+                    { color: '#f5f58f', text: 'Industry & Business' },
+                    { color: '#fa667d', text: 'Community Services' },
+                    { color: '#ffbfbf', text: 'Recreation & Leisure' },
+                    { color: '#b3de69', text: 'Transport' },
+                    { color: '#cccccc', text: 'Utilities & Infrastructure' },
+                    { color: '#898944', text: 'Defence' },
+                    { color: '#73ccd1', text: 'Agriculture' },
+                    { color: '#45cce3', text: 'Minerals' },
+                    { color: '#ffffff', text: 'Vacant & Derelict' },
+                    { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+                ]
+            },
+        },
+        {
+            mapStyle: 'building_attachment_form',
+            legend: {
+                title: 'Attachment/Adjacency',
+                elements: [
+                    { color: "#f2a2b9", text: "Detached" },
+                    { color: "#ab8fb0", text: "Semi-Detached" },
+                    { color: "#3891d1", text: "End-Terrace" },
+                    { color: "#226291", text: "Mid-Terrace" }
+                ]
+            },
+        },
+    ],
     [Category.LandUse]: [
         {
             mapStyle: 'landuse',
@@ -338,11 +430,11 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'is_domestic',
             legend: {
-                title: 'Domestic building',
+                title: 'Residential building',
                 elements: [
-                    { color: '#f7ec25', text: 'Domestic' },
+                    { color: '#f7ec25', text: 'Residential' },
                     { color: '#fc9b2a', text: 'Mixed' },
-                    { color: '#ff2121', text: 'Non-domestic' },
+                    { color: '#ff2121', text: 'Non-residential' },
                 ]
             }
         }

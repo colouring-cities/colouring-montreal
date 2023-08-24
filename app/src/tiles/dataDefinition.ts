@@ -266,6 +266,15 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             current_landuse_order IS NOT NULL`,
+    original_landuse: `
+        SELECT
+            geometry_id,
+            typology_original_use_order,
+            typology_original_use[1] as typology_original_use,
+            typology_original_use_verified
+        FROM
+            buildings
+        WHERE typology_original_use IS NOT NULL`,
     disaster_severity: `
         SELECT
             geometry_id,
@@ -281,6 +290,27 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE jsonb_array_length(demolished_buildings) > 0 OR dynamics_has_demolished_buildings = FALSE`,
+    typology_classification: `
+        SELECT
+            geometry_id,
+            typology_classification
+        FROM
+            buildings
+        WHERE typology_classification IS NOT NULL`,
+    typology_style_period: `
+        SELECT
+            geometry_id,
+            typology_style_period
+        FROM
+            buildings
+        WHERE typology_style_period IS NOT NULL`,
+        typology_dynamic_classification: `
+        SELECT
+            geometry_id,
+            typology_dynamic_classification
+        FROM
+            buildings
+        WHERE typology_dynamic_classification IS NOT NULL`,
 };
 
 const GEOMETRY_FIELD = 'geometry_geom';

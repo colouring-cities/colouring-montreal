@@ -59,6 +59,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    location_name_link: {
+        edit: true,
+        verify: true,
+    },
     location_number: {
         edit: true,
         verify: true,
@@ -103,6 +107,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true
     },
+    location_alternative_footprint_links: {
+        edit: true,
+        verify: true
+    },
     date_year: {
         edit: true,
         verify: true,
@@ -123,6 +131,14 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
     },
     date_link: {
+        edit: true,
+        verify: true,
+    },
+    date_source_type: {
+        edit: true,
+        verify: true,
+    },
+    date_source_links: {
         edit: true,
         verify: true,
     },
@@ -254,6 +270,14 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    construction_core_material_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_core_material_source_links: {
+        edit: true,
+        verify: true,
+    },
     construction_secondary_materials: {
         edit: false,
     },
@@ -261,6 +285,116 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    construction_roof_covering_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_roof_covering_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_structural_system: {
+        edit: true,
+        verify: true,
+    },
+    construction_structural_system_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_structural_system_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_foundation: {
+        edit: true,
+        verify: true,
+    },
+    construction_foundation_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_foundation_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_roof_shape: {
+        edit: true,
+        verify: true,
+    },
+    construction_roof_shape_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_roof_shape_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_irregularities: {
+        edit: true,
+        verify: true,
+    },
+    construction_irregularities_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_irregularities_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_decorative_features: {
+        edit: true,
+        verify: true,
+    },
+    construction_decorative_feature_materials: {
+        edit: true,
+        verify: true,
+    },
+    construction_decorative_feature_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_decorative_feature_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_external_wall: {
+        edit: true,
+        verify: true,
+    },
+    construction_external_wall_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_external_wall_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_internal_wall: {
+        edit: true,
+        verify: true,
+    },
+    construction_internal_wall_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_internal_wall_source_links: {
+        edit: true,
+        verify: true,
+    },
+    construction_ground_floor: {
+        edit: true,
+        verify: true,
+    },
+    construction_ground_floor_source_type: {
+        edit: true,
+        verify: true,
+    },
+    construction_ground_floor_source_links: {
+        edit: true,
+        verify: true,
+    },
+
+
     planning_portal_link: {
         edit: true,
         verify: true,
@@ -277,7 +411,19 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    planning_crowdsourced_site_completion_source_type: {
+        edit: true,
+        verify: true,
+    },
+    planning_crowdsourced_site_completion_source_links: {
+        edit: true,
+        verify: true,
+    },
     planning_crowdsourced_planning_id: {
+        edit: true,
+        verify: true,
+    },
+    planning_in_conservation_area: {
         edit: true,
         verify: true,
     },
@@ -301,6 +447,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    planning_world_heritage_site: {
+        edit: true,
+        verify: true,
+    },
     planning_world_list_id: {
         edit: true,
         verify: true,
@@ -309,11 +459,23 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    planning_in_apa: {
+        edit: true,
+        verify: true,
+    },
     planning_in_apa_url: {
         edit: true,
         verify: true,
     },
+    planning_local_list: {
+        edit: true,
+        verify: true,
+    },
     planning_local_list_url: {
+        edit: true,
+        verify: true,
+    },
+    planning_historic_area_assessment: {
         edit: true,
         verify: true,
     },
@@ -322,6 +484,30 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true,
     },
     planning_list_id: {
+        edit: true,
+        verify: true,
+    },
+    planning_missing_data: {
+        edit: true,
+        verify: true,
+    },
+    planning_missing_data_links: {
+        edit: true,
+        verify: true,
+    },
+    planning_heritage_at_risk: {
+        edit: true,
+        verify: true,
+    },
+    planning_scientific_interest: {
+        edit: true,
+        verify: true,
+    },
+    planning_scientific_interest_source_type: {
+        edit: true,
+        verify: true,
+    },
+    planning_scientific_interest_source_links: {
         edit: true,
         verify: true,
     },
@@ -352,6 +538,14 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: false,
     },
     building_attachment_form: {
+        edit: true,
+        verify: true,
+    },
+    building_attachment_source_type: {
+        edit: true,
+        verify: true,
+    },
+    building_attachment_source_links: {
         edit: true,
         verify: true,
     },
@@ -482,6 +676,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true
     },
+    developer_links: {
+        edit: true,
+        verify: true
+    },
     developer_source_type: {
         edit: true,
         verify: true
@@ -494,6 +692,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true
     },
+    landowner_links: {
+        edit: true,
+        verify: true
+    },
     landowner_source_type: {
         edit: true,
         verify: true
@@ -503,6 +705,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     designers: {
+        edit: true,
+        verify: true
+    },
+    designers_links: {
         edit: true,
         verify: true
     },
@@ -527,6 +733,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     builder: {
+        edit: true,
+        verify: true
+    },
+    builder_links: {
         edit: true,
         verify: true
     },
@@ -685,7 +895,95 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
     age_retrofit_date_source_links : {
         edit: true,
         verify: true
-    }
+    },
+    age_historical_raster_map_links : {
+        edit: true,
+        verify: true
+    },
+    age_historical_vectorised_footprint_links : {
+        edit: true,
+        verify: true
+    },
+    energy_solar : {
+        edit: true,
+        verify: true
+    },
+    energy_solar_source_type : {
+        edit: true,
+        verify: true
+    },
+    energy_solar_source_links : {
+        edit: true,
+        verify: true
+    },
+    energy_green_roof : {
+        edit: true,
+        verify: true
+    },
+    energy_green_roof_source_type : {
+        edit: true,
+        verify: true
+    },
+    energy_green_roof_source_links : {
+        edit: true,
+        verify: true
+    },
+    typology_classification : {
+        edit: true,
+        verify: true
+    },
+    typology_classification_source_type : {
+        edit: true,
+        verify: true
+    },
+    typology_classification_source_links: {
+        edit: true,
+        verify: true
+    },
+    typology_style_period : {
+        edit: true,
+        verify: true
+    },
+    typology_style_period_source_type : {
+        edit: true,
+        verify: true
+    },
+    typology_style_period_source_links: {
+        edit: true,
+        verify: true
+    },
+    typology_dynamic_classification : {
+        edit: true,
+        verify: true
+    },
+    typology_dynamic_classification_source_type : {
+        edit: true,
+        verify: true
+    },
+    typology_dynamic_classification_source_links: {
+        edit: true,
+        verify: true
+    },
+    typology_original_use : {
+        edit: true,
+        derivedEdit: true,
+        verify: true
+    },
+    typology_original_use_verified: {
+        edit: true,
+    },
+    typology_original_use_order : {
+        edit: true,
+        verify: true
+    },
+    typology_original_use_source_type : {
+        edit: true,
+        verify: true
+    },
+    typology_original_use_source_links: {
+        edit: true,
+        verify: true
+    },
 });
 
 
