@@ -1,18 +1,18 @@
 {
-    "cityName": "Cities",
-    "projectBlurb": "Colouring {City Name} is part of Colouring Cities.",
-    
-    "githubURL": "https://github.com/colouring-cities/colouring-core",
+    "cityName": "Montréal",
+    "projectBlurb": "Colouring Montréal is part of Colouring Cities.",
+
+    "githubURL": "https://github.com/colouring-cities/colouring-montreal",
     "manualURL": "https://github.com/colouring-cities/manual/wiki/M3.-COLOURING-BRITAIN",
     "privacyStatement": "{Privacy statement goes here}",
 
-    "initialMapPosition": [ 51.5245255, -0.1338422 ],
+    "initialMapPosition": [45.4962261, -73.5801403],
     "initialZoomLevel": 16,
 
     "postcode": "Postcode",
     "energy_rating": "Building Research Establishment Environmental Assessment Method (BREEAM) rating [<a href='https://bregroup.com/products/breeam/how-breeam-works'>More info</a>]",
 
-    "bbox": [-61149.622628, 6667754.851372, 37183, 6744803.375884],
+    "bbox": [-8135086.254447, 5675540.368758, -8267367.825970, 5751427.756290],
 
     "basemapTileUrl": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
     "baseAttribution": "Building attribute data is © Colouring Cities contributors. Basemap © <a href=https://www.openstreetmap.org/copyright>OpenStreetMap contributors</a>. Building © MODIFY TO PROVIDE RELEVANT INFO"
