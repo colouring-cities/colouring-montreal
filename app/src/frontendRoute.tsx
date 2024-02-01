@@ -23,7 +23,6 @@ let config: CCConfig = require('./cc-config.json')
 // reference packed assets
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
-
 const frontendRoute = asyncController(async (req: express.Request, res: express.Response) => {
     const context: any = {}; // TODO: remove any
     const data: any = {}; // TODO: remove any
@@ -76,7 +75,7 @@ const frontendRoute = asyncController(async (req: express.Request, res: express.
 
 function renderHTML(context, data, req, res) {
     const markup = renderToString(
-        <StaticRouter context={context} location={req.url}>
+        <StaticRouter basename={process.env.SUBDIRECTORY} context={context} location={req.url}>
             <App
                 user={data.user}
                 building={data.building}

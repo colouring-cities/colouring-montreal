@@ -40,19 +40,16 @@ export const MultiSelectDataEntry: React.FunctionComponent<MultiSelectDataEntryP
         }
             {
                 props.options.map(o => (
-                    <>
-                        <label>
-                            <input
-                                type="checkbox"
-                                disabled={props.mode === 'view' || props.disabled}
-                                name={o.key}
-                                checked={props.value && props.value[o.key]}
-                                onChange={handleChange}
-                            />
-                            {o.label}
-                        </label>
-                        <br/>
-                    </>
+                    <label>
+                        <input
+                            type="checkbox"
+                            disabled={props.mode === 'view' || props.disabled}
+                            name={o.key}
+                            checked={props.value && props.value[o.key]}
+                            onChange={handleChange}
+                        />
+                        {o.label}
+                    </label>
                 ))
             }
         </>

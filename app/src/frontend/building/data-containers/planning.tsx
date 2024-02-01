@@ -69,10 +69,6 @@ const PlanningView: React.FunctionComponent<CategoryViewProps> = (props) => {
         e.preventDefault();
         props.onMapColourScale('planning_applications_status_very_recent')
     }
-    const switchToLocalSignificanceMapStyle = (e) => {
-        e.preventDefault();
-        props.onMapColourScale('community_local_significance_total')
-    }
     const { flood, floodSwitchOnClick, housing, housingSwitchOnClick, creative, creativeSwitchOnClick, vista, vistaSwitchOnClick, parcel, parcelSwitchOnClick, conservation, conservationSwitchOnClick, darkLightTheme } = useDisplayPreferences();
     const communityLinkUrl = `/${props.mode}/${Category.Community}/${props.building.building_id}`;
     const currentYear = new Date().getFullYear();
@@ -272,22 +268,6 @@ const PlanningView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 <InfoBox type='warning'>
                     Further improvements to this feature are currently being made.
                 </InfoBox>
-                <UserOpinionEntry
-                    slug='community_local_significance'
-                    title={buildingUserFields.community_local_significance.title}
-                    tooltip={buildingUserFields.community_local_significance.tooltip}
-                    userValue={props.building.community_local_significance}
-
-                    onChange={props.onSaveChange}
-                    mode={props.mode}
-                />
-                {(props.mapColourScale != "community_local_significance_total") ? 
-                    <button className={`map-switcher-inline enabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToLocalSignificanceMapStyle}>
-                        {'Click to show buildings of local interest.'}
-                    </button>
-                    :
-                    <></>
-                }
             </DataEntryGroup>
             <DataEntryGroup name="Planning zones" collapsed={subcat==null || subcat!="6"}>
                 <InfoBox>

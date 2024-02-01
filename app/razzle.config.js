@@ -1,4 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     plugins: [
@@ -21,11 +22,16 @@ module.exports = {
 
         // add the map_styles directory to the build output
         const plugins = webpackConfig.plugins || [];
+
         plugins.push(new CopyPlugin({
             patterns: [ {from: 'map_styles', to: 'map_styles'}]
         }));
-        webpackConfig.plugins = plugins;
 
+        plugins.push(new webpack.DefinePlugin({
+            'process.env.SUBDIRECTORY': JSON.stringify(process.env.SUBDIRECTORY),
+        }));
+
+        webpackConfig.plugins = plugins;
         return webpackConfig;
     },
 };

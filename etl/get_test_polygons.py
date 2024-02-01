@@ -18,8 +18,9 @@ osmnx.config(log_console=True, use_cache=True)
 # configure the image display
 size = 256
 
-# load buildings from about 1.5km² around UCL
-point = (51.524498, -0.133874)
+# (load buildings from about 1.5km² around UCL)
+# Latitude and longitude of the ER building:
+point = (45.4962261, -73.5801403)
 dist = 612
 tags = {"building": True}
 gdf = osmnx.features_from_point(point, tags, dist=dist)

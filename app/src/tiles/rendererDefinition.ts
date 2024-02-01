@@ -7,8 +7,6 @@ import { stitchTile } from "./renderers/stitchTile";
 import { TileCache } from "./tileCache";
 import { BoundingBox, Tile, TileParams } from "./types";
 import { isOutsideExtent } from "./util";
-import { CCConfig } from '../cc-config';
-let config: CCConfig = require('../cc-config.json')
 
 /**
  * A list of all tilesets handled by the tile server
@@ -20,11 +18,6 @@ const allTilesets = getAllLayerNames();
  * from the zoom level below - gets similar effect, with much lower load on Postgres
  */
 const STITCH_THRESHOLD = 12;
-
-/**
- * Hard-code extent so we can short-circuit rendering and return empty/transparent tiles outside the area of interest
- */
-const EXTENT_BBOX: BoundingBox = config.bbox;
 
 const allLayersCacheSwitch = parseBooleanExact(process.env.CACHE_TILES) ?? true;
 const dataLayersCacheSwitch = parseBooleanExact(process.env.CACHE_DATA_TILES) ?? true;
@@ -69,10 +62,6 @@ function stitchOrRenderBuildingTile(tileParams: TileParams, dataParams: any): Pr
 }
 
 function renderTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
-    if (isOutsideExtent(tileParams, EXTENT_BBOX)) {
-        return createBlankTile();
-    }
-
     if (tileParams.tileset === 'highlight') {
         return renderBuildingTile(tileParams, dataParams);
     }

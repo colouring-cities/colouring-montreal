@@ -9,9 +9,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from './frontend/app';
 
 const data = (window as any).__PRELOADED_STATE__; // TODO: remove any
-
 hydrate(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.SUBDIRECTORY}>
         <App
             user={data.user}
             building={data.building}

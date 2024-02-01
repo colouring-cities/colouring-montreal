@@ -366,11 +366,7 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                 <div className="section-body">
                 <InfoBox>
                     {this.props.intro}&nbsp;
-                    {(this.props.title !== "Community") ? 
-                        "Can you help us capture and verify this information?" 
-                        : 
-                        "" 
-                    }
+                    Can you help us capture and verify this information?
                 </InfoBox>
                 <EditHistoryLatest
                     building={this.props.building}

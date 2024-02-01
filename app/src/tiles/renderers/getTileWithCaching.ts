@@ -10,9 +10,7 @@ async function getTileWithCaching(tileParams: TileParams, dataParams: any, tileC
         const im = await renderTile(tileParams, dataParams);
         try {
             await tileCache.put(im, tileParams);
-        } catch (err) {
-            console.error(err);
-        }
+        } catch (err) {}
         return im;
     }
 }
