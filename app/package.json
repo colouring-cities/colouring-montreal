@@ -4,6 +4,7 @@
   "description": "Render frontend (server- and client-side)",
   "private": true,
   "license": "MIT",
+  "homepage": "/colouringmontreal",
   "scripts": {
     "clean": "rm -rf build",
     "start": "razzle start",
