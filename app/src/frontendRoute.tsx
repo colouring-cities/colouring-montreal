@@ -118,8 +118,8 @@ function renderHTML(context, data, req, res) {
         <style>
           @font-face {
             font-family: 'glacial_cl';
-            src: url('/fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
-            url('/fonts/glacialindifference-regular-webfont.woff') format('woff');
+            src: url(${process.env.SUBDIRECTORY??''}'/fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
+            url('${process.env.SUBDIRECTORY??''}/fonts/glacialindifference-regular-webfont.woff') format('woff');
             font-weight: normal;
             font-style: normal;
           }
