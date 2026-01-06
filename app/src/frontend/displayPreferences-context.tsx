@@ -53,6 +53,12 @@ interface DisplayPreferencesContextState {
     showLayerSelection: LayerEnablementState;
     showLayerSelectionSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     showLayerSelectionSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+    
+    fsa: LayerEnablementState;
+    fsaSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    fsaSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+  
+
 }
 
 const stub = (): never => {
@@ -62,6 +68,10 @@ const stub = (): never => {
 export const DisplayPreferencesContext = createContext<DisplayPreferencesContextState>({
     showOverlayList: stub,
     resetLayersAndHideTheirList: stub,
+
+    fsa: undefined,
+    fsaSwitch: stub,
+    fsaSwitchOnClick: undefined,
 
     vista: undefined,
     vistaSwitch: stub,
@@ -126,6 +136,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultHistoricMap = 'disabled'
     const defaultEditableBuildings = 'enabled'
     const defaultShowLayerSelection = 'disabled'
+    const defaultfsa='disabled'
     const [vista, setVista] = useState<LayerEnablementState>(defaultVista);
     const [flood, setFlood] = useState<LayerEnablementState>(defaultFlood);
     const [creative, setCreative] = useState<LayerEnablementState>(defaultCreative);
@@ -138,6 +149,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const [editableBuildings, setEditableBuildings] = useState<LayerEnablementState>(defaultEditableBuildings);
     const [darkLightTheme, setDarkLightTheme] = useState<MapTheme>('night');
     const [showLayerSelection, setShowLayerSelection] = useState<LayerEnablementState>(defaultShowLayerSelection);
+    const [fsa, setfsa] = useState<LayerEnablementState>(defaultfsa);
 
     const showOverlayList = useCallback(
         (e) => {
@@ -159,6 +171,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             setHistoricMap(defaultHistoricMap);
             setEditableBuildings(defaultEditableBuildings)
             setShowLayerSelection(defaultShowLayerSelection); // reset layers + hiding this panel is integrated into one action
+            setfsa(defaultfsa);
             //setDarkLightTheme('night'); // reset only layers
     },
         []
@@ -193,6 +206,9 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             return true;
         }
         if(editableBuildings != defaultEditableBuildings) {
+            return true;
+        }
+        if(fsa != defaultfsa) {
             return true;
         }
         setEditableBuildings
@@ -386,6 +402,20 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         setShowLayerSelection(newShowLayerSelection);
     }
 
+    const fsaSwitch = useCallback(
+        (e) => {
+            flipfsa(e)
+        },
+        [fsa],
+    )
+    const fsaSwitchOnClick = (e) => {
+        flipfsa(e)
+    }
+    function flipfsa(e) {
+        e.preventDefault();
+        const newfsa = (fsa === 'enabled')? 'disabled' : 'enabled';
+        setfsa(newfsa);
+    }
 
     return (
         <DisplayPreferencesContext.Provider value={{
@@ -433,7 +463,12 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
 
             showLayerSelection,
             showLayerSelectionSwitch,
-            showLayerSelectionSwitchOnClick
+            showLayerSelectionSwitchOnClick,
+
+            fsa,
+            fsaSwitch,
+            fsaSwitchOnClick
+            
         }}>
             {children}
         </DisplayPreferencesContext.Provider>

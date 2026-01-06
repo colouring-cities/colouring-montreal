@@ -25,7 +25,9 @@ import { BuildingBaseLayer } from './layers/building-base-layer';
 import { BuildingDataLayer } from './layers/building-data-layer';
 import { BuildingNumbersLayer } from './layers/building-numbers-layer';
 import { BuildingHighlightLayer } from './layers/building-highlight-layer';
+import {FsaLayer} from './layers/fsa-layer';
 
+import {FsaSwitcher}  from './fsa-switcher';
 import { Legend } from './legend';
 import SearchBox from './search-box';
 import ThemeSwitcher from './theme-switcher';
@@ -130,6 +132,9 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     name='cc-overlay-pane'
                     style={{zIndex: 300}}
                 >
+                    <div>bbbb</div>
+                   
+                    <FsaLayer/>
                     <CityBoundaryLayer/>
                     <HistoricDataLayer revisionId={revisionId} />
                     <HistoricMapLayer revisionId={revisionId} />
@@ -170,6 +175,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 {
                     (showLayerSelection == "enabled") ?
                     <>
+                     
+                        <FsaSwitcher/>
                         <BoroughSwitcher/>
                         <ParcelSwitcher/>
                         <FloodSwitcher/>
