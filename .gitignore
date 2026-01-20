@@ -8,7 +8,7 @@ ecosystem.config.js
 app/start.sh
 html/norton*.html
 .vscode
-
+configuration/
 # Data
 etl/
 etl/cache/*
