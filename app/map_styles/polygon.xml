@@ -1271,20 +1271,31 @@
         </Rule>
     </Style>
     <Style name="is_domestic">
+          
         <Rule>
-            <Filter>[is_domestic] = "yes"</Filter>
+            <Filter>[is_domestic] = "Single family"</Filter>
             <PolygonSymbolizer fill="#f7ec25" />
             <LineSymbolizer stroke="#f7ec25" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[is_domestic] = "mixed domestic/non-domestic"</Filter>
+            <Filter>[is_domestic] = "Row house"</Filter>
             <PolygonSymbolizer fill="#fc9b2a" />
             <LineSymbolizer stroke="#fc9b2a" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[is_domestic] = "no"</Filter>
+            <Filter>[is_domestic] = "Duplex-trplex"</Filter>
             <PolygonSymbolizer fill="#ff2121" />
             <LineSymbolizer stroke="#ff2121" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[is_domestic] = "Small murb" </Filter>
+            <PolygonSymbolizer fill="#21ff51ff"/>
+            <LineSymbolizer stroke="#21ff51ff" stroke-width="2.0"/>
+        </Rule>
+                <Rule>
+            <Filter>[is_domestic] = "Mid rise" </Filter>
+            <PolygonSymbolizer fill="#78bbd6ff"/>
+            <LineSymbolizer stroke="#78bbd6ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <MaxScaleDenominator>17061</MaxScaleDenominator>

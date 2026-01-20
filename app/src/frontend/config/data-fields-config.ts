@@ -1412,9 +1412,11 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: null,
         example: "mixed domestic/non-domestic",
         items: [
-            "Yes",
-            "No",
-            "Mixed domestic/non-domestic"
+            "Single family",
+            "Row house",
+            "Duplex-trplex",
+            "Small murb",
+            "Mid rise"
         ]
     },
     is_domestic_source: {

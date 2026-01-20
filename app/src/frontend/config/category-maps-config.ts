@@ -754,9 +754,11 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Residential building',
                 elements: [
-                    { color: '#f7ec25', text: 'Residential' },
-                    { color: '#fc9b2a', text: 'Mixed' },
-                    { color: '#ff2121', text: 'Non-residential' },
+                    { color: '#f7ec25', text: 'Single family' },
+                    { color: '#fc9b2a', text: 'Row house' },
+                    { color: '#ff2121', text: 'Duplex-trplex' },
+                    { color: '#21ff51ff', text: 'Small murb' },
+                    { color: '#78bbd6ff', text: 'Mid rise' },
                 ]
             }
         }
