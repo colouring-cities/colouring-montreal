@@ -1405,7 +1405,31 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         example: true,
     },
     
-
+    sus_total_energy_consum: {
+        category: Category.EnergyPerformance,
+        title: "total energy consumption",
+        tooltip: null,
+        example: 100 ,
+    
+    },
+    sus_total_energy_consum_area: {
+        category: Category.EnergyPerformance,
+        title: "total energy consumption/area",
+        tooltip: null,
+        example: 100,
+     },
+    sus_total_pv_production: {
+        category: Category.EnergyPerformance,
+        title: "total PV production",
+        tooltip: null,
+        example: 100,
+     },
+    sus_total_pv_self_suffi: {
+        category: Category.EnergyPerformance,
+        title: "total PV production seld sufficiancey",
+        tooltip: null,
+        example: 100,
+     },
     is_domestic: {
         category: Category.EnergyPerformance,
         title: "Is the building residential, non-residential or mixed? (automatically generated from Specific Land Use/s)",

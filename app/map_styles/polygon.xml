@@ -2345,57 +2345,120 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
-    <Style name="sust_aggregate_estimate_epc">
+    <Style name="sus_total_energy_consum">
         <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = A</Filter>
-            <PolygonSymbolizer fill="#007f3d" />
-            <LineSymbolizer stroke="#007f3d" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = B</Filter>
-            <PolygonSymbolizer fill="#2c9f29" />
-            <LineSymbolizer stroke="#2c9f29" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = C</Filter>
-            <PolygonSymbolizer fill="#9dcb3c" />
-            <LineSymbolizer stroke="#9dcb3c" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = D</Filter>
-            <PolygonSymbolizer fill="#fff200" />
-            <LineSymbolizer stroke="#fff200" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = E</Filter>
-            <PolygonSymbolizer fill="#f7af1d" />
-            <LineSymbolizer stroke="#f7af1d" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = F</Filter>
-            <PolygonSymbolizer fill="#ed6823" />
-            <LineSymbolizer stroke="#ed6823" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] = G</Filter>
-            <PolygonSymbolizer fill="#e31d23" />
-            <LineSymbolizer stroke="#e31d23" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[sust_aggregate_estimate_epc] is null</Filter>
-            <PolygonSymbolizer fill="#c0c0c0" />
-            <LineSymbolizer stroke="#c0c0c0" stroke-width="2.0"/>
+        <Filter>[sus_total_energy_consum] &gt;= 13.71 and [sus_total_energy_consum] &lt; 7994031.117</Filter>
+        <PolygonSymbolizer fill="#f7f4f9" />
+        <LineSymbolizer stroke="#f7f4f9" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
-            <MaxScaleDenominator>17061</MaxScaleDenominator>
-            <MinScaleDenominator>4264</MinScaleDenominator>
-            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        <Filter>[sus_total_energy_consum] &gt;= 7994031.117 and [sus_total_energy_consum] &lt; 15988048.524</Filter>
+        <PolygonSymbolizer fill="#e0d4f7" />
+        <LineSymbolizer stroke="#e0d4f7" stroke-width="2.0"/>
         </Rule>
+
         <Rule>
-            <MaxScaleDenominator>4264</MaxScaleDenominator>
-            <MinScaleDenominator>0</MinScaleDenominator>
-            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        <Filter>[sus_total_energy_consum] &gt;= 15988048.524 and [sus_total_energy_consum] &lt; 23982065.931</Filter>
+        <PolygonSymbolizer fill="#c9a3f0" />
+        <LineSymbolizer stroke="#c9a3f0" stroke-width="2.0"/>
         </Rule>
+
+        <Rule>
+        <Filter>[sus_total_energy_consum] &gt;= 23982065.931 and [sus_total_energy_consum] &lt; 31976083.338</Filter>
+        <PolygonSymbolizer fill="#b07ee8" />
+        <LineSymbolizer stroke="#b07ee8" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_energy_consum] &gt;= 31976083.338 and [sus_total_energy_consum] &lt; 39970100.745</Filter>
+        <PolygonSymbolizer fill="#8746df" />
+        <LineSymbolizer stroke="#8746df" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_energy_consum] &gt;= 39970100.745 </Filter>
+        <PolygonSymbolizer fill="#5c00b3" />
+        <LineSymbolizer stroke="#5c00b3" stroke-width="2.0"/>
+        </Rule>
+
+       
+    </Style>
+    <Style name="sus_total_pv_production">
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 736283.47 and [sus_total_pv_production] &lt; 600034218.06</Filter>
+        <PolygonSymbolizer fill="#deebf7" />
+        <LineSymbolizer stroke="#deebf7" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 600034218.06 and [sus_total_pv_production] &lt; 1199332152.65</Filter>
+        <PolygonSymbolizer fill="#9ecae1" />
+        <LineSymbolizer stroke="#9ecae1" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 1199332152.65 and [sus_total_pv_production] &lt; 1798630087.24</Filter>
+        <PolygonSymbolizer fill="#6baed6" />
+        <LineSymbolizer stroke="#6baed6" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 1798630087.24 and [sus_total_pv_production] &lt; 2397928021.83</Filter>
+        <PolygonSymbolizer fill="#3182bd" />
+        <LineSymbolizer stroke="#3182bd" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 2397928021.83 and [sus_total_pv_production] &lt; 2997225956.42</Filter>
+        <PolygonSymbolizer fill="#08519c" />
+        <LineSymbolizer stroke="#08519c" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_production] &gt;= 2997225956.42 </Filter>
+        <PolygonSymbolizer fill="#08306b" />
+        <LineSymbolizer stroke="#08306b" stroke-width="2.0"/>
+        </Rule>
+
+    </Style>
+
+    <Style name="sus_total_pv_self_suffi">
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 0.01 and [sus_total_pv_self_suffi] &lt; 10.74</Filter>
+        <PolygonSymbolizer fill="#ccf2dbff" />
+        <LineSymbolizer stroke="#ccf2dbff" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 10.74 and [sus_total_pv_self_suffi] &lt; 21.45</Filter>
+        <PolygonSymbolizer fill="#9dd3a0ff" />
+        <LineSymbolizer stroke="#9dd3a0ff" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 21.45 and [sus_total_pv_self_suffi] &lt; 32.16</Filter>
+        <PolygonSymbolizer fill="#66c2a4" />
+        <LineSymbolizer stroke="#66c2a4" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 32.16 and [sus_total_pv_self_suffi] &lt; 42.87</Filter>
+        <PolygonSymbolizer fill="#2ca25f" />
+        <LineSymbolizer stroke="#2ca25f" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 42.87 and [sus_total_pv_self_suffi] &lt; 53.58</Filter>
+        <PolygonSymbolizer fill="#006d2c" />
+        <LineSymbolizer stroke="#006d2c" stroke-width="2.0"/>
+        </Rule>
+
+        <Rule>
+        <Filter>[sus_total_pv_self_suffi] &gt;= 53.58 and [sus_total_pv_self_suffi] </Filter>
+        <PolygonSymbolizer fill="#06441fff" />
+        <LineSymbolizer stroke="#06441fff" stroke-width="2.0"/>
+        </Rule>
+
     </Style>
 </Map>

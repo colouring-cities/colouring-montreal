@@ -214,24 +214,59 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         },
     ],
     [Category.EnergyPerformance]: [
-        {
-            mapStyle: 'sust_aggregate_estimate_epc',
+
+                {
+            mapStyle: 'sus_total_energy_consum',
             legend: {
-                title: 'Energy rating (EPC)',
-                description: 'Residential energy rating (EPC Rating)',
-                disclaimer: 'This map shows official 2025 EPC data, required for new, sold and rented buildings. Please note EPC ratings may be out-of-date, as retrofit may have occurred since certification.',
+                title: 'Total Energy Consumption',
                 elements: [
-                    { color: "#007f3d", text: 'A' },
-                    { color: "#2c9f29", text: 'B' },
-                    { color: "#9dcb3c", text: 'C' },
-                    { color: "#fff200", text: 'D' },
-                    { color: "#f7af1d", text: 'E' },
-                    { color: "#ed6823", text: 'F' },
-                    { color: "#e31d23", text: 'G' },
-                    { color: "#c0c0c0", text: 'No EPC identified' },
+                    { color: '#f7f4f9', text: '13.71 - 7994031.117'},
+                    { color: '#e0d4f7', text: '7994031.117 - 5988048.524'},
+                    { color: '#c9a3f0', text: '5988048.524 - 23982065.931'},
+                    { color: '#b07ee8', text: '23982065.931 - 31976083.338'},
+                    { color: '#8746df', text: '31976083.338 - 39970100.745'},
+                     { color:'#5c00b3', text: '39970100.745 +'},
+                
+                ]
+            },
+        },   
+        
+        {
+            mapStyle: 'sus_total_pv_production',
+            legend: {
+                title: 'Total PV Production',
+                elements: [
+                    { color: '#f7f4f9', text: '736283.47  - 600034218.06'},
+                    { color: '#9ecae1', text: '600034218.06  - 5988048.524'},
+                    { color: '#9ecae1', text: '5988048.524 - 1199332152.65'},
+                    { color: '#6baed6', text: '21199332152.65 - 1798630087.24'},
+                    { color: '#3182bd', text: '31798630087.24 - 32397928021.83'},
+                    { color:'#08519c', text: '32397928021.83 - 2997225956.42'},
+                    { color:'#08306b', text: '2997225956.42 +'},
+                
                 ]
             },
         },
+            
+     
+        {
+            mapStyle: 'sus_total_pv_self_suffi',
+            legend: {
+                title: 'Total PV self sufficiancy',
+                elements: [
+                    { color: '#ccf2dbff', text: '0.01 - 10.74'},
+                    { color: '#9dd3a0ff', text: '10.74 - 21.45'},
+                    { color: '#66c2a4', text: '21.45- 32.16'},
+                    { color: '#2ca25f', text: '32.16 - 42.87'},
+                    { color: '#006d2c', text: '42.87 - 53.58'},
+                     { color:'#06441fff', text: '53.58 +'},
+                
+                ]
+            },
+        }, 
+  
+
+
         {
             mapStyle: 'sust_dec',
             legend: {

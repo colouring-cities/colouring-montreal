@@ -594,6 +594,26 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
     sust_life_expectancy: {
         edit: false,
     },
+    sus_total_energy_consum:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_total_energy_consum_area:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_total_pv_production:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_total_pv_self_suffi:{
+        edit:true,
+        verify: true,
+
+    },
     building_attachment_form: {
         edit: true,
         verify: true,

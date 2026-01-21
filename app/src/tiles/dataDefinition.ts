@@ -595,6 +595,36 @@ const LAYER_QUERIES = {
             sust_aggregate_estimate_epc::text AS sust_aggregate_estimate_epc
         FROM
             buildings`,
+    sus_total_energy_consum: `
+        SELECT
+            geometry_id,
+            sus_total_energy_consum AS sus_total_energy_consum
+        FROM
+            buildings
+        WHERE
+            sus_total_energy_consum IS NOT NULL
+            AND
+            sus_total_energy_consum != 0`,      
+    sus_total_pv_production: `
+        SELECT
+            geometry_id,
+            sus_total_pv_production AS sus_total_pv_production
+        FROM
+            buildings
+        WHERE
+            sus_total_pv_production IS NOT NULL
+            AND
+            sus_total_pv_production != 0`,     
+    sus_total_pv_self_suffi: `
+        SELECT
+            geometry_id,
+            sus_total_pv_self_suffi AS sus_total_pv_self_suffi
+        FROM
+            buildings
+        WHERE
+            sus_total_pv_self_suffi IS NOT NULL
+            AND
+            sus_total_pv_self_suffi != 0`,  
     context_walkability_index: `
         SELECT
             geometry_id,

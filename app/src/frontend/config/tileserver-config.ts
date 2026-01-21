@@ -54,7 +54,10 @@ export type BuildingMapTileset =
     'designer_awards' |
     'energy_solar' |
     'energy_green_roof' |
-    'sust_aggregate_estimate_epc';
+    'sust_aggregate_estimate_epc'|
+    'sus_total_energy_consum'|
+    'sus_total_pv_production'|
+    'sus_total_pv_self_suffi';
     
 
 export type SpecialMapTileset = 'base_light' | 'base_night' | 'base_night_outlines' | 'highlight' | 'number_labels' | 'base_boroughs';
