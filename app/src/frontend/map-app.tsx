@@ -101,11 +101,13 @@ export const MapApp: React.FC<MapAppProps> = props => {
 
     const colourBuilding = useCallback(async (building: Building) => {
         const buildingId = building?.building_id;
-
+        console.log("kkkbb")
         if(buildingId != undefined && multiEditError == undefined) {
             try {
                 const updatedBuilding = await sendBuildingUpdate(buildingId, multiEditData);
                 updateRevisionId(updatedBuilding.revision_id);
+                console.log("kkkbb")
+                console.log(updateRevisionId)
             } catch(error) {
                 console.error({ error });
             }
@@ -172,6 +174,9 @@ export const MapApp: React.FC<MapAppProps> = props => {
                     />
                 </Switch>
             </Sidebar>
+            {
+                console.log(mode)
+            }
             <ColouringMap
                 selectedBuildingId={selectedBuildingId}
                 mode={mode || 'basic'}

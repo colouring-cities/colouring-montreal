@@ -12,6 +12,8 @@ import { allTilesets, renderTile } from './rendererDefinition';
 import { TileParams } from './types';
 
 const handleTileRequest = asyncController(async function (req: express.Request, res: express.Response) {
+    console.log("handleTileRequest")
+ 
     try {
         var tileParams = parseTileParams(req.params);
         var dataParams = req.query;
@@ -32,6 +34,7 @@ const handleTileRequest = asyncController(async function (req: express.Request, 
 
 // tiles router
 const router = express.Router();
+
 
 router.get('/:tileset/:z/:x/:y(\\d+):scale(@\\dx)?.png', handleTileRequest);
 

@@ -25,6 +25,7 @@ interface BuildingViewProps {
  * @param props
  */
 const BuildingView: React.FunctionComponent<BuildingViewProps> = (props) => {
+    console.log("BuildingView")
     const { user } = useAuth();
     const DataContainer = categoryUiConfig[props.cat];
     

@@ -5,6 +5,8 @@ import { getBbox, getXYZ, TILE_SIZE } from "../util";
 
 
 async function stitchTile({ tileset, z, x, y, scale }: TileParams, dataParams: any, renderTile: RendererFunction): Promise<Tile> {
+    console.log("stitchTile")
+    console.log(z, x, y, scale)
     const bbox = getBbox(z, x, y);
     const nextZ = z + 1;
     const nextXY = getXYZ(bbox, nextZ);

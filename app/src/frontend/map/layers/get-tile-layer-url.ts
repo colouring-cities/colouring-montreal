@@ -9,6 +9,9 @@ import { MapTileset } from '../../config/tileserver-config';
 export function getTileLayerUrl<T extends MapTileset = MapTileset>(tileset: T, parameters?: Record<string, string>) {
     let paramString = parameters && new URLSearchParams(parameters).toString();
     paramString = paramString == undefined ? '' : `?${paramString}`;
+    console.log("getTileLayerUrl")
+    console.log(tileset)
+    
 
     return `${process.env.SUBDIRECTORY??''}/tiles/${tileset}/{z}/{x}/{y}{r}.png${paramString}`;
 }

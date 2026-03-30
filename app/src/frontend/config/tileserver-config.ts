@@ -57,7 +57,11 @@ export type BuildingMapTileset =
     'sust_aggregate_estimate_epc'|
     'sus_total_energy_consum'|
     'sus_total_pv_production'|
-    'sus_total_pv_self_suffi';
+    'sus_total_pv_self_suffi'|
+    'sus_geo_heat_close_loop'|
+    'sus_geo_share_close_loop'|
+    'sus_geo_share_open_loop'|
+    'sus_geo_heat_open_loop';
     
 
 export type SpecialMapTileset = 'base_light' | 'base_night' | 'base_night_outlines' | 'highlight' | 'number_labels' | 'base_boroughs';

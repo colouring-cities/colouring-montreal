@@ -7,7 +7,7 @@
   "homepage": "/colouringmontreal",
   "scripts": {
     "clean": "rm -rf build",
-    "start": " PGPORT=5432 PGHOST=localhost PGPASSWORD=123456 APP_COOKIE_SECRET=123456 PGUSER=colouring_cities PGDATABASE=colouringcitiesdb TILECACHE_PATH=./tilecache razzle start",
+    "start": " PGPORT=5432 PGHOST=localhost PGPASSWORD=123456 APP_COOKIE_SECRET=123456 PGUSER=colouring_cities PGDATABASE=colouringcitiesdb2 TILECACHE_PATH=./tilecache razzle start",
     "build": "razzle build --noninteractive",
     "test": "razzle test --env=jsdom",
     "lint": "eslint --ext .tsx --ext .ts .",

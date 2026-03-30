@@ -1426,10 +1426,36 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
      },
     sus_total_pv_self_suffi: {
         category: Category.EnergyPerformance,
-        title: "total PV production seld sufficiancey",
+        title: "total PV production self sufficiancey",
         tooltip: null,
         example: 100,
      },
+    sus_geo_heat_open_loop: {
+        category: Category.EnergyPerformance,
+        title: "total geothermal open loop heat production",
+        tooltip: null,
+        example: 0,
+     },
+    sus_geo_share_open_loop: {
+        category: Category.EnergyPerformance,
+        title: "total geothermal open loop share",
+        tooltip: null,
+        example: 0,
+     },
+
+    sus_geo_heat_close_loop: {
+        category: Category.EnergyPerformance,
+        title: "total geothermal close loop heat production",
+        tooltip: null,
+        example: 0,
+     },
+    sus_geo_share_close_loop: {
+        category: Category.EnergyPerformance,
+        title: "total geothermal close loop share",
+        tooltip: null,
+        example: 0,
+     },
+  
     is_domestic: {
         category: Category.EnergyPerformance,
         title: "Is the building residential, non-residential or mixed? (automatically generated from Specific Land Use/s)",

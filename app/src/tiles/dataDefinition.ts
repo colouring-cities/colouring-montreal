@@ -625,6 +625,50 @@ const LAYER_QUERIES = {
             sus_total_pv_self_suffi IS NOT NULL
             AND
             sus_total_pv_self_suffi != 0`,  
+    sus_geo_heat_close_loop: `
+        SELECT
+            geometry_id,
+            sus_geo_heat_close_loop AS sus_geo_heat_close_loop
+        FROM
+            buildings
+        WHERE
+            sus_geo_heat_close_loop IS NOT NULL
+            AND
+            sus_geo_heat_close_loop != 0`,  
+
+     sus_geo_share_close_loop: `
+        SELECT
+            geometry_id,
+            sus_geo_share_close_loop AS sus_geo_share_close_loop
+        FROM
+            buildings
+        WHERE
+            sus_geo_share_close_loop IS NOT NULL
+            AND
+            sus_geo_share_close_loop != 0`,      
+            
+    sus_geo_heat_open_loop: `
+        SELECT
+            geometry_id,
+            sus_geo_heat_open_loop AS sus_geo_heat_open_loop
+        FROM
+            buildings
+        WHERE
+            sus_geo_heat_open_loop IS NOT NULL
+            AND
+            sus_geo_heat_open_loop != 0`,  
+
+    sus_geo_share_open_loop: `
+        SELECT
+            geometry_id,
+            sus_geo_share_open_loop AS sus_geo_share_open_loop
+        FROM
+            buildings
+        WHERE
+            sus_geo_share_open_loop IS NOT NULL
+            AND
+            sus_geo_share_open_loop != 0`,           
+              
     context_walkability_index: `
         SELECT
             geometry_id,
@@ -645,8 +689,10 @@ function getAllLayerNames() {
 }
 
 function getDataConfig(tileset: string): DataConfig {
+    console.log("tileset_dataconfig")
+    console.log(tileset)
     const table = LAYER_QUERIES[tileset];
-
+    
     if(table == undefined) {
         throw new Error('Invalid tileset requested');
     }

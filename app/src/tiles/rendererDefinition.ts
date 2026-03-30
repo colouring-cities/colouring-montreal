@@ -59,19 +59,32 @@ const tileCache = new TileCache(
 const renderBuildingTile = (t: TileParams, d: any) => renderDataSourceTile(t, d, getDataConfig, getLayerVariables);
 
 function cacheOrCreateBuildingTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
+     console.log("cacheOrCreateBuildingTile")
     return getTileWithCaching(tileParams, dataParams, tileCache, stitchOrRenderBuildingTile);
 }
 
 function stitchOrRenderBuildingTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
     if (tileParams.z <= STITCH_THRESHOLD && tileParams.tileset != "base_boroughs") {
         // stitch tile, using cache recursively
-        return stitchTile(tileParams, dataParams, cacheOrCreateBuildingTile);
+        //return stitchTile(tileParams, dataParams, cacheOrCreateBuildingTile);
+        return stitchTile(tileParams, dataParams, renderBuildingTile);
     } else {
         return renderBuildingTile(tileParams, dataParams);
     }
 }
 
 function renderTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
+    const lable=`rendertile ${tileParams.tileset} z=${tileParams.z} x=${tileParams.x} z=${tileParams.z}`
+
+    console.time(lable)
+    const finish=<T,>(p:Promise<T>)=>
+        p.finally(()=>console.timeEnd(lable))
+
+    console.log(tileParams)
+    console.log(dataParams)
+    console.log(tileParams.tileset)
+
+
     if (isOutsideExtent(tileParams, EXTENT_BBOX) 
         || tileParams.z < MIN_ZOOM_FOR_RENDERING_TILES
         || tileParams.z > MAX_ZOOM_FOR_RENDERING_TILES
@@ -85,10 +98,11 @@ function renderTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
     }
 
     if (tileParams.tileset === 'highlight') {
+        console.log("highlight")
         return renderBuildingTile(tileParams, dataParams);
     }
-
-    return cacheOrCreateBuildingTile(tileParams, dataParams);
+    
+    return finish(cacheOrCreateBuildingTile(tileParams, dataParams));
 }
 
 export {

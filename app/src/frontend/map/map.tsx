@@ -45,6 +45,7 @@ import { EditableBuildingsSwitcher } from './editable-buildings-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
+import { CustomZoomControl} from './layers/CustomZoomControl'
 
 interface ColouringMapProps {
     selectedBuildingId: number;
@@ -66,6 +67,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     categoryMapDefinitions,
     children
 }) => {
+
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
     const [position, setPosition] = useState(initialMapViewport.position);
     const [zoom, setZoom] = useState(initialMapViewport.zoom);
@@ -90,6 +92,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     )
 
     return (
+      
         <div className="map-container">
             <MapContainer
                 center={initialMapViewport.position}
@@ -100,6 +103,10 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 zoomControl={false}
                 attributionControl={false}
             >
+     
+                 {
+                     console.log(mapColourScale)
+                 }
                 <ClickHandler onClick={handleClick} />
                 <MapBackgroundColor theme={darkLightTheme} />
                 <MapViewport position={position} zoom={zoom} />
@@ -110,7 +117,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     style={{zIndex: 50}}
                 >
                     <CityBaseMapLayer theme={darkLightTheme} />
-                    <BuildingBaseLayer theme={darkLightTheme} />
+                    {/* <BuildingBaseLayer theme={darkLightTheme} /> */}
                 </Pane>
 
                 <Pane
@@ -126,13 +133,19 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                             tileset={mapColourScale}
                             revisionId={revisionId}
                         />
+                             
+          
                 }
-
+        
+                {
+                    console.log(mapColourScale)
+                }
+        
                 <Pane
                     name='cc-overlay-pane'
                     style={{zIndex: 300}}
                 >
-                    <div>bbbb</div>
+       
                    
                     <FsaLayer/>
                     <CityBoundaryLayer/>
@@ -160,7 +173,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <BoroughLabelLayer/>
                 </Pane>
 
-                <ZoomControl position="topright" />
+                {/* <ZoomControl position="topright" /> */}
+                <CustomZoomControl/>
                 <AttributionControl prefix=""/>
             </MapContainer>
             {

@@ -265,34 +265,99 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         }, 
   
-
-
         {
-            mapStyle: 'sust_dec',
+            mapStyle: 'sus_geo_heat_open_loop',
             legend: {
-                title: 'Energy rating (DEC)',
-                description: 'Non-domestic energy rating (DEC Rating)',
+                title: 'Heat open loop',
                 elements: [
-                    { color: "#007f3d", text: 'A' },
-                    { color: "#2c9f29", text: 'B' },
-                    { color: "#9dcb3c", text: 'C' },
-                    { color: "#fff200", text: 'D' },
-                    { color: "#f7af1d", text: 'E' },
-                    { color: "#ed6823", text: 'F' },
-                    { color: "#e31d23", text: 'G' },
+                    { color: '#fff5eb', text: '112382.33 - 17152784.81'},
+                    { color: '#fdd0a2', text: '17152784.81 - 34193187.30'},
+                    { color: '#fdae6b', text: '34193187.30- 34193187.31 '},
+                    { color: '#fdae6b', text: '34193187.31  - 51233589.80 '},
+                    { color: '#fd8d3c', text: '51233589.80  - 68273992.28'},
+                    { color: '#e6550d', text: '68273992.28 - 85314394.77'},
+                    { color: '#a63603', text: '85314394.77 +'},
+                
                 ]
             },
         },
+
         {
-            mapStyle: 'energy_solar',
+            mapStyle: 'sus_geo_share_open_loop',
             legend: {
-                title: 'Solar panels',
-                description: 'Does the building have Solar Panels?',
+                title: 'Heat share open loop',
                 elements: [
-                    {color: '#6bb1e3', text: 'Yes'},
+                    { color: '#f2f0f7', text: '0- 0.63'},
+                    { color: '#dadaeb', text: '.63 - 0.66'},
+                    { color: '#bcbddc', text: '0.66- 0.69'},
+                    { color: '#9e9ac8', text: '0.69  - 0.72'},
+                    { color: '#756bb1', text: '0.72 - 0.74'},
+                    { color: '#54278f', text: '74 +'},
+                    
+                
+                ]
+            },
+        }, 
+              {
+            mapStyle: 'sus_geo_heat_close_loop',
+            legend: {
+                title: 'Heat close loop',
+                elements: [
+                    { color: '#fff5eb', text: '0 - 16662742.11'},
+                    { color: '#fdd0a2', text: '16662742.11 -  33315714.91'},
+                    { color: '#fdae6b', text: '33315714.91 -  49968687.71'},
+                    { color: '#fdae6b', text: '49968687.71  - 66621660.51'},
+                    { color: '#fd8d3c', text: '66621660.51 -  83274633.31'},
+                    { color: '#e6550d', text: '83274633.31 - 83274633.31'},
+                    { color: '#a63603', text: '83274633.31  +'},
+                
                 ]
             },
         },
+
+        {
+            mapStyle: 'sus_geo_share_close_loop',
+            legend: {
+                title: 'Heat share close loop',
+                elements: [
+                    { color: '#f2f0f7', text: '0 - 0.59'},
+                    { color: '#dadaeb', text: '0.59 - 0.62'},
+                    { color: '#bcbddc', text: '0.62- 0.65'},
+                    { color: '#9e9ac8', text: '0.65  - 0.68'},
+                    { color: '#756bb1', text: '0.68 - 0.71'},
+                    { color: '#54278f', text: '71 +'},
+                    
+                
+                ]
+            },
+        }, 
+ 
+        // {
+        //     mapStyle: 'sust_dec',
+        //     legend: {
+        //         title: 'Energy rating (DEC)',
+        //         description: 'Non-domestic energy rating (DEC Rating)',
+        //         elements: [
+        //             { color: "#007f3d", text: 'A' },
+        //             { color: "#2c9f29", text: 'B' },
+        //             { color: "#9dcb3c", text: 'C' },
+        //             { color: "#fff200", text: 'D' },
+        //             { color: "#f7af1d", text: 'E' },
+        //             { color: "#ed6823", text: 'F' },
+        //             { color: "#e31d23", text: 'G' },
+        //         ]
+        //     },
+        // },
+        // {
+        //     mapStyle: 'energy_solar',
+        //     legend: {
+        //         title: 'Solar panels',
+        //         description: 'Does the building have Solar Panels?',
+        //         elements: [
+        //             {color: '#6bb1e3', text: 'Yes'},
+        //         ]
+        //     },
+        // },
     ],
     [Category.PlanningConservation]: [
         {

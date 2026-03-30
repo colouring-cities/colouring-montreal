@@ -10,6 +10,8 @@ export function BuildingBaseLayerAllZoom({ theme }: {theme: MapTheme}) {
     const tileset = `base_${theme}` as const;
 
     return <TileLayer
+                updateWhenIdle={true}
+                updateWhenZooming={false}
                 key={theme} /* needed because TileLayer url is not mutable in react-leaflet v3 */
                 url={getTileLayerUrl(tileset)}
                 minZoom={1}

@@ -2461,4 +2461,226 @@
         </Rule>
 
     </Style>
+
+    <Style name="sus_geo_heat_open_loop">
+       <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 0 and
+            [sus_geo_heat_open_loop] &lt;= 17152784.81
+        </Filter>
+        <PolygonSymbolizer fill="#fff5eb" />
+        <LineSymbolizer stroke="#fff5eb" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 17152784.81 and
+            [sus_geo_heat_open_loop] &lt;= 34193187.30
+        </Filter>
+        <PolygonSymbolizer fill="#fdd0a2" />
+        <LineSymbolizer stroke="#fdd0a2" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 34193187.30 and
+            [sus_geo_heat_open_loop] &lt;= 51233589.79
+        </Filter>
+        <PolygonSymbolizer fill="#fdae6b" />
+        <LineSymbolizer stroke="#fdae6b" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 51233589.79 and
+            [sus_geo_heat_open_loop] &lt;= 68273992.28
+        </Filter>
+        <PolygonSymbolizer fill="#fd8d3c" />
+        <LineSymbolizer stroke="#fd8d3c" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 68273992.28 and
+            [sus_geo_heat_open_loop] &lt;= 85314394.77
+        </Filter>
+        <PolygonSymbolizer fill="#e6550d" />
+        <LineSymbolizer stroke="#e6550d" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_open_loop] &gt;= 85314394.77 
+        </Filter>  
+        <PolygonSymbolizer fill="#a63603" />
+        <LineSymbolizer stroke="#a63603" stroke-width="2.0" />
+        </Rule>
+
+    </Style>
+    <Style name="sus_geo_share_open_loop">
+       <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0 and
+            [sus_geo_share_open_loop] &lt;= 0.63
+        </Filter>
+        <PolygonSymbolizer fill="#f2f0f7" />
+        <LineSymbolizer stroke="#f2f0f7" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0.63 and
+            [sus_geo_share_open_loop] &lt;= 0.66
+        </Filter>
+        <PolygonSymbolizer fill="#dadaeb" />
+        <LineSymbolizer stroke="#dadaeb" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0.66 and
+            [sus_geo_share_open_loop] &lt;= 0.69
+        </Filter>
+        <PolygonSymbolizer fill="#bcbddc" />
+        <LineSymbolizer stroke="#bcbddc" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0.69 and
+            [sus_geo_share_open_loop] &lt;= 0.72
+        </Filter>
+        <PolygonSymbolizer fill="#9e9ac8" />
+        <LineSymbolizer stroke="#9e9ac8" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0.72 and
+            [sus_geo_share_open_loop] &lt;= 0.74
+        </Filter>
+        <PolygonSymbolizer fill="#756bb1" />
+        <LineSymbolizer stroke="#756bb1" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_open_loop] &gt;= 0.74
+        </Filter>
+        <PolygonSymbolizer fill="#54278f" />
+        <LineSymbolizer stroke="#54278f" stroke-width="2.0" />
+        </Rule>
+
+    </Style>
+    <Style name="sus_geo_heat_close_loop">
+       <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 0 and
+            [sus_geo_heat_close_loop] &lt;= 16662742.11
+        </Filter>
+        <PolygonSymbolizer fill="#fff5eb" />
+        <LineSymbolizer stroke="#fff5eb" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 16662742.11 and
+            [sus_geo_heat_close_loop] &lt;= 33315714.91
+        </Filter>
+        <PolygonSymbolizer fill="#fdd0a2" />
+        <LineSymbolizer stroke="#fdd0a2" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 33315714.91 and
+            [sus_geo_heat_close_loop] &lt;= 49968687.71
+        </Filter>
+        <PolygonSymbolizer fill="#fdae6b" />
+        <LineSymbolizer stroke="#fdae6b" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 49968687.71 and
+            [sus_geo_heat_close_loop] &lt;= 66621660.51
+        </Filter>
+        <PolygonSymbolizer fill="#fd8d3c" />
+        <LineSymbolizer stroke="#fd8d3c" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 66621660.51 and
+            [sus_geo_heat_close_loop] &lt;= 83274633.31
+        </Filter>
+        <PolygonSymbolizer fill="#e6550d" />
+        <LineSymbolizer stroke="#e6550d" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_heat_close_loop] &gt;= 83274633.31 
+        </Filter>  
+        <PolygonSymbolizer fill="#a63603" />
+        <LineSymbolizer stroke="#a63603" stroke-width="2.0" />
+        </Rule>
+
+    </Style>
+
+     <Style name="sus_geo_share_close_loop">
+       <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0 and
+            [sus_geo_share_close_loop] &lt;= 0.59
+        </Filter>
+        <PolygonSymbolizer fill="#f2f0f7" />
+        <LineSymbolizer stroke="#f2f0f7" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0.59 and
+            [sus_geo_share_close_loop] &lt;= 0.62
+        </Filter>
+        <PolygonSymbolizer fill="#dadaeb" />
+        <LineSymbolizer stroke="#dadaeb" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0.62 and
+            [sus_geo_share_close_loop] &lt;= 0.65
+        </Filter>
+        <PolygonSymbolizer fill="#bcbddc" />
+        <LineSymbolizer stroke="#bcbddc" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0.65 and
+            [sus_geo_share_close_loop] &lt;= 0.68
+        </Filter>
+        <PolygonSymbolizer fill="#9e9ac8" />
+        <LineSymbolizer stroke="#9e9ac8" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0.68 and
+            [sus_geo_share_close_loop] &lt;= 0.71
+        </Filter>
+        <PolygonSymbolizer fill="#756bb1" />
+        <LineSymbolizer stroke="#756bb1" stroke-width="2.0" />
+        </Rule>
+
+        <Rule>
+        <Filter>
+            [sus_geo_share_close_loop] &gt;= 0.71
+        </Filter>
+        <PolygonSymbolizer fill="#54278f" />
+        <LineSymbolizer stroke="#54278f" stroke-width="2.0" />
+        </Rule>
+
+    </Style>
 </Map>

@@ -5,6 +5,8 @@ import {getTileLayerUrl } from './get-tile-layer-url';
 
 export function BuildingNumbersLayer({revisionId}: {revisionId: string}) {
     return <TileLayer
+                updateWhenIdle={true}
+                updateWhenZooming={false}
                 key={`numbers-${revisionId}`} /* needed because TileLayer url is not mutable in react-leaflet v3 */
                 url={getTileLayerUrl('number_labels', {rev: revisionId})}
                 minZoom={17}

@@ -79,7 +79,7 @@ const EnergyPerformanceView: React.FunctionComponent<CategoryViewProps> = (props
                 </DataEntryGroup>
             </DataEntryGroup>   
             <DataEntryGroup name="PV" collapsed={subcat==null || subcat!="1"}>   
-                 <DataEntryGroup name="Total PV Production" collapsed={subcat==null || subcat!="1"}>
+            <DataEntryGroup name="Total PV Production" collapsed={subcat==null || subcat!="1"}>
                    <NumericDataEntry
                         title={dataFields.sus_total_pv_production.title}
                         slug="sus_total_pv_production"
@@ -124,7 +124,103 @@ const EnergyPerformanceView: React.FunctionComponent<CategoryViewProps> = (props
                 
                 </DataEntryGroup>
             </DataEntryGroup>
-         
+
+            <DataEntryGroup name="open loop heat production" collapsed={subcat==null || subcat!="1"}>   
+            <DataEntryGroup name="Total potential open loop" collapsed={subcat==null || subcat!="1"}>
+                   <NumericDataEntry
+                        title={dataFields.sus_geo_heat_open_loop.title}
+                        slug="sus_geo_heat_open_loop"
+                        tooltip={dataFields.sus_geo_heat_open_loop.tooltip}
+                        value={props.building.sus_geo_heat_open_loop}
+                        copy={props.copy}
+                        mode={props.mode}
+                        onChange={props.onChange}
+                        step={0.1}
+                        min={0}
+                    />
+                    <Verification
+                        slug="sus_geo_heat_open_loop"
+                        allow_verify={props.user !== undefined && props.building.sus_geo_heat_open_loop !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("sus_geo_heat_open_loop")}
+                        user_verified_as={props.user_verified.sus_geo_heat_open_loop}
+                        verified_count={props.building.verified.sus_geo_heat_open_loop}
+                    />
+                
+                </DataEntryGroup>
+                <DataEntryGroup name="Total share open loop" collapsed={subcat==null || subcat!="1"}>
+                   <NumericDataEntry
+                        title={dataFields.sus_geo_share_open_loop.title}
+                        slug="sus_geo_share_open_loop"
+                        tooltip={dataFields.sus_geo_share_open_loop.tooltip}
+                        value={props.building.sus_geo_share_open_loop}
+                        copy={props.copy}
+                        mode={props.mode}
+                        onChange={props.onChange}
+                        step={0.1}
+                        min={0}
+                    />
+                    <Verification
+                        slug="sus_geo_share_open_loop"
+                        allow_verify={props.user !== undefined && props.building.sus_geo_share_open_loop !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("sus_geo_share_open_loop")}
+                        user_verified_as={props.user_verified.sus_geo_share_open_loop}
+                        verified_count={props.building.verified.sus_geo_share_open_loop}
+                    />
+                
+                </DataEntryGroup>
+            </DataEntryGroup>
+            
+            
+            <DataEntryGroup name="close loop heat production" collapsed={subcat==null || subcat!="1"}>   
+            <DataEntryGroup name="Total potential close loop" collapsed={subcat==null || subcat!="1"}>
+                   <NumericDataEntry
+                        title={dataFields.sus_geo_heat_close_loop.title}
+                        slug="sus_geo_heat_close_loop"
+                        tooltip={dataFields.sus_geo_heat_close_loop.tooltip}
+                        value={props.building.sus_geo_heat_close_loop}
+                        copy={props.copy}
+                        mode={props.mode}
+                        onChange={props.onChange}
+                        step={0.1}
+                        min={0}
+                    />
+                    <Verification
+                        slug="sus_geo_heat_close_loop"
+                        allow_verify={props.user !== undefined && props.building.sus_geo_heat_close_loop !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("sus_geo_heat_close_loop")}
+                        user_verified_as={props.user_verified.sus_geo_heat_close_loop}
+                        verified_count={props.building.verified.sus_geo_heat_close_loop}
+                    />
+                
+                </DataEntryGroup>
+                <DataEntryGroup name="Total share close loop" collapsed={subcat==null || subcat!="1"}>
+                   <NumericDataEntry
+                        title={dataFields.sus_geo_share_close_loop.title}
+                        slug="sus_geo_share_close_loop"
+                        tooltip={dataFields.sus_geo_share_close_loop.tooltip}
+                        value={props.building.sus_geo_share_close_loop}
+                        copy={props.copy}
+                        mode={props.mode}
+                        onChange={props.onChange}
+                        step={0.1}
+                        min={0}
+                    />
+                    <Verification
+                        slug="sus_geo_share_close_loop"
+                        allow_verify={props.user !== undefined && props.building.sus_geo_share_close_loop !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("sus_geo_share_close_loop")}
+                        user_verified_as={props.user_verified.sus_geo_share_close_loop}
+                        verified_count={props.building.verified.sus_geo_share_close_loop}
+                    />
+                
+                </DataEntryGroup>
+            </DataEntryGroup>
+            
+
         </form>
     );
 };

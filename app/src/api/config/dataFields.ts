@@ -614,6 +614,25 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true,
 
     },
+    sus_geo_heat_open_loop:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_geo_share_open_loop:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_geo_heat_close_loop:{
+        edit:true,
+        verify: true,
+
+    },
+    sus_geo_share_close_loop:{
+        edit:true,
+        verify: true,
+    },
     building_attachment_form: {
         edit: true,
         verify: true,
